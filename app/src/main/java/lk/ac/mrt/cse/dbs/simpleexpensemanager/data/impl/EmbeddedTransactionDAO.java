@@ -43,8 +43,8 @@ public class EmbeddedTransactionDAO implements TransactionDAO {
     public List<Transaction> getAllTransactionLogs() {
         List<Transaction> transactions = new ArrayList<>();
 
-        String TRANSACTION_QUERY = "SELECT * FROM Account_Transaction";
-        Cursor cursor = database.rawQuery(TRANSACTION_QUERY, null);
+        String transaction_query = "SELECT * FROM Account_Transaction";
+        Cursor cursor = database.rawQuery(transaction_query, null);
 
         try {
             if (cursor.moveToFirst()) {

@@ -27,7 +27,7 @@ public class EmbeddedAccountDAO  implements AccountDAO {
     //get account numbers
     @Override
     public List<String> getAccountNumbersList() {
-        List<String> accountNumbers = new ArrayList<>();
+        List<String> accountNum = new ArrayList<>();
 
         String account_numbers_query = "SELECT accountNo FROM Account";
 
@@ -39,7 +39,7 @@ public class EmbeddedAccountDAO  implements AccountDAO {
                     String test=cursor.getString(cursor
                             .getColumnIndex("accountNo"));
 
-                    accountNumbers.add(test);
+                    accountNum.add(test);
 
                 } while (cursor.moveToNext());
             }
@@ -51,7 +51,7 @@ public class EmbeddedAccountDAO  implements AccountDAO {
             }
         }
 
-        return accountNumbers;
+        return accountNum;
     }
 
     @Override
